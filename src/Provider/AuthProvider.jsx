@@ -13,29 +13,23 @@ function AuthProvider({children}) {
     
         function handleSignInBtn(){
      return  signInWithPopup(auth,provider)
-            // .then((response)=>{
-            //     console.log(response)
-            //     setUser(response.user)
-            // })
-            // .catch((err)=>{
-            //     console.log(err)
-            // })
         }
 
          // Email and password login 
+
         const handleAuthWithEmailAndPassword=(email,password)=>{
             setIsLoading(true)
-            createUserWithEmailAndPassword(auth,email,password)
-          .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    // ...
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
+       return     createUserWithEmailAndPassword(auth,email,password)
+//           .then((userCredential) => {
+//     // Signed up 
+//     const user = userCredential.user;
+//     // ...
+//   })
+//   .catch((error) => {
+//     const errorCode = error.code;
+//     const errorMessage = error.message;
+//     // ..
+//   });
 
         }
     
